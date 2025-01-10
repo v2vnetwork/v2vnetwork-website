@@ -1,0 +1,113 @@
+.pageWrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 1rem 0;
+  animation: fadeIn 1s ease-out;
+}
+
+.serviceSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.8s ease-out;
+}
+
+.imageContainer {
+  flex: 1; /* Allow the image container to grow */
+  position: relative;
+  height: auto; /* Allow height to adjust */
+}
+
+.image {
+  width: 100%; /* Use full width */
+  height: auto; /* Maintain aspect ratio naturally */
+  border-radius: 20px; /* Rounded corners */
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.textContent {
+  flex: 1; /* Allow text content to grow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subTitle {
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+}
+
+.description {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+/* Responsive Design */
+@media (max-width:768px) {
+    .serviceSection {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 1rem; /* Reduced padding */
+    }
+
+    .imageContainer {
+        width: auto; /* Allow container to adjust width */
+        height: auto; /* Allow height to adjust */
+        display: flex; /* Ensure it can contain the image properly */
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+    }
+
+    .image {
+        max-width: calc(100% - 20px); /* Allow image to scale as needed with some margin */
+        height: auto; /* Maintain aspect ratio naturally */
+    }
+}
+
+@media (max-width:480px) {
+    .sectionTitle {
+        font-size: clamp(1.5rem,4vw,2rem); /* Smaller title for mobile */
+    }
+
+    .subTitle {
+        font-size: clamp(1.2rem,3vw,1.5rem); /* Smaller subtitle for mobile */
+    }
+
+    .description {
+        font-size: clamp(0.9rem,3vw,1rem); /* Smaller description for mobile */
+    }
+
+    .imageContainer {
+        height: auto; /* Ensure the container is responsive on small screens */
+        display: flex; /* Ensure it can contain the image properly */
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+    }
+}
+
+/* Keyframes remain the same */
+
+@keyframes fadeIn {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity:0; }
+    to { transform: translateY(0); opacity:1; }
+}

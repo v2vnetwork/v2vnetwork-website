@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center; /* Center the heading */
+  background-color: #f7f7f7;
+  opacity: 0; /* Initial opacity */
+  transform: translateY(20px); /* Initial position */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Transition for animation */
+}
+
+.inView {
+  opacity: 1; /* Final opacity */
+  transform: translateY(0); /* Final position */
+}
+
+.heading {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 30px;
+}
+
+.paragraphContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 40px);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.paragraph {
+  flex: 1;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+
+  /* Align text to the left */
+  text-align: left; /* Ensure text is left-aligned */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width:768px) {
+   .container {
+      padding:15px; /* Adjust padding for mobile view */
+   }
+
+   .paragraphContainer {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+   }
+
+   .paragraph {
+      text-align: left; /* Ensure text is left-aligned on smaller screens as well */
+   }
+}
+
+@media (max-width:480px) {
+   .container {
+      padding:10px; /* Further reduce padding on very small screens */
+   }
+
+   .heading {
+      margin-bottom:20px; /* Adjust margin for smaller screens */
+   }
+}

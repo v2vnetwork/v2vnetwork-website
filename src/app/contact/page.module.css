@@ -1,0 +1,142 @@
+@keyframes fadeInUp {
+   from {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ @keyframes scaleIn {
+   from {
+     transform: scale(0.95);
+     opacity: 0;
+   }
+   to {
+     transform: scale(1);
+     opacity: 1;
+   }
+ }
+ 
+ .pageWrapper {
+   position: relative;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden; /* Prevent horizontal scrolling */
+ }
+ 
+ .mainContent {
+   flex: 1;
+   padding: 0.5rem 1rem;
+   animation: fadeInUp 0.8s ease-out;
+   display: flex;
+   flex-direction: column;
+   width: 100%; /* Ensure full width */
+   max-width: 100%; /* Prevent exceeding viewport width */
+   box-sizing: border-box; /* Include padding in width calculation */
+ }
+ 
+ .contactUs {
+   max-width: 1200px;
+   width: 100%;
+   margin: auto;
+   padding: 1rem;
+   flex: 1;
+   padding-bottom: 3rem;
+   box-sizing: border-box; /* Include padding in width calculation */
+ }
+ 
+ .sectionTitle {
+   font-size: clamp(1.5rem, 4vw, 3rem);
+   text-align: center;
+   margin-bottom: 2rem;
+   margin-top: 0;
+   animation: fadeInUp 0.8s ease-out 0.2s both;
+ }
+ 
+ .contactGrid {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 2rem;
+ }
+ 
+ .imageSection {
+   animation: fadeInUp 0.8s ease-out 0.4s both;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .contactImage {
+   width: 100%;
+   max-width: 500px;
+   height: auto;
+   border-radius: 8px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   object-fit: cover;
+   aspect-ratio: 16 / 9;
+ }
+ 
+ .contactInfo {
+   display: flex;
+   flex-direction: column;
+   animation: fadeInUp 0.8s ease-out 0.4s both;
+ }
+ 
+ .contactInfo h3 {
+   font-size: clamp(1.2rem, 3vw, 2.5rem);
+   margin-bottom: 1rem;
+ }
+ 
+ .contactInfo p {
+   font-size: clamp(0.9rem, 2vw, 1.3rem);
+   margin-bottom: 1rem;
+ }
+ 
+ .contactDetails {
+   margin-top: 1rem;
+ }
+ 
+ .contactDetails p {
+   margin-bottom: 0.8rem;
+   font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+ }
+ 
+ @media (max-width: 767px) {
+   .contactImage {
+     max-width: 80%;
+   }
+ }
+ 
+ @media (min-width: 768px) {
+   .contactUs {
+     padding: 1rem 2rem 4rem;
+   }
+ 
+   .contactGrid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ }
+ 
+ @media (min-width: 1201px) {
+   .contactUs {
+     padding-left: calc((100vw - 1200px) / 2);
+     padding-right: calc((100vw - 1200px) / 2);
+     padding-bottom: 5rem;
+   }
+   
+   .contactInfo h3 {
+     font-size: 2.5rem;
+   }
+   
+   .contactInfo p {
+     font-size: 1.3rem;
+   }
+   
+   .contactDetails p {
+     font-size: 1.2rem;
+   }
+ }

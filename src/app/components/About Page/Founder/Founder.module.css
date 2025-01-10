@@ -1,0 +1,46 @@
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.memberSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.memberImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.memberSection:hover .memberImage {
+  transform: scale(1.05);
+}
+
+.memberInfo {
+  flex: 1;
+}
+
+.memberName {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.memberRole {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.memberDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}

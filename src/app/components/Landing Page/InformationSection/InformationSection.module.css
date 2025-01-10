@@ -1,0 +1,105 @@
+.informationSection {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: rgba(247, 247, 247, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    opacity: 0; /* Initial state */
+    transform: translateY(20px); /* Initial state */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.inView {
+    opacity: 1; /* Final state */
+    transform: translateY(0); /* Final state */
+}
+
+.imageContainer {
+    flex: 1;
+    position: relative;
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+}
+
+.image {
+    width: 75%; /* Set image width to 75% of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.textContainer {
+    flex: 1;
+    padding-left: 2rem; /* Space between image and text */
+}
+
+.heading {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+    .informationSection {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        padding: 1.5rem; /* Adjusted padding */
+    }
+
+    .imageContainer,
+    .textContainer {
+        flex: none; /* Prevent flex growth/shrinkage */
+        width: 100%; /* Ensure full width on small screens */
+    }
+
+    .image {
+        width: 75%; /* Maintain image size at 75% on smaller screens */
+        margin-bottom: 1rem; /* Space below image */
+        align-self: center; /* Center the image on smaller screens */
+    }
+
+    .textContainer {
+        padding-left: 0; /* Remove left padding on small screens */
+        padding-top: 1rem; /* Add some space above text on small screens */
+    }
+
+    .heading {
+        font-size: clamp(1.8rem, 4vw, 2rem); /* Smaller heading for mobile */
+    }
+
+    .paragraph {
+        font-size: clamp(0.9rem, 3vw, 1rem); /* Smaller paragraph for mobile */
+    }
+}
+
+@media (max-width:768px) {
+   .heading {
+       font-size: clamp(1.5rem,4vw,1.8rem); /* Smaller heading for mobile */
+   }
+
+   .paragraph {
+       font-size: clamp(0.9rem,3vw,0.9rem); /* Smaller paragraph for mobile */
+   }
+}
+
+@media (max-width:480px) {
+   .informationSection {
+       padding:.5rem; /* Further reduce padding on very small screens */
+   }
+
+   .heading {
+       font-size: clamp(1.3rem,3vw,1.5rem); /* Even smaller heading for very small screens */
+   }
+
+   .paragraph {
+       font-size: clamp(0.8rem,2vw,0.9rem); /* Smaller paragraph for very small screens */
+       line-height: 1.4; /* Adjust line height for better readability */
+   }
+}

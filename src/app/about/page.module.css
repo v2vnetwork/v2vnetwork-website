@@ -1,0 +1,26 @@
+.pageWrapper {
+  position: relative;
+  min-height: 140vh;
+}
+
+.mainContent {
+  padding-bottom: 50px;
+}
+
+.aboutUs {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}

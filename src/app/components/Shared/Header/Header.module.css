@@ -1,0 +1,155 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #0C0404;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 180px;
+  height: auto;
+  max-height: 60px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navLink:hover {
+  color: #5e17eb;
+}
+
+.servicesLink {
+  cursor: default;
+}
+
+.mobileMenuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.servicesDropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0C0404;
+  min-width: 250px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdownItem:hover {
+  background-color: #5e17eb;
+  color: #ffffff;
+}
+
+.topicIcon {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #0C0404;
+    padding: 1rem;
+  }
+
+  .navigation.mobileMenuOpen {
+    display: flex;
+  }
+
+  .mobileMenuToggle {
+    display: block;
+  }
+
+  .navLink {
+    padding: 0.75rem 0;
+  }
+
+  .servicesDropdown {
+    width: 100%;
+  }
+
+  .dropdownContent {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    display: none;
+  }
+
+  .servicesDropdown:hover .dropdownContent {
+    display: block;
+  }
+
+  .dropdownItem {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoImage {
+    width: 100px;
+  }
+
+  .container {
+    padding: 0.25rem 0.5rem;
+  }
+}
