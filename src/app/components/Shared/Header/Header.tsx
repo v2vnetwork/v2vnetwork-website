@@ -45,7 +45,7 @@ export default function Header() {
         <Link href="/" className={styles.logoLink}>
           <div style={{ position: 'relative', width: '180px', height: '60px' }}>
             <Image
-              src="/assets/images/logo_1.png" 
+              src="/assets/images/Logo.png" 
               alt="V2V Network Logo" 
               className={styles.logoImage}
               fill
