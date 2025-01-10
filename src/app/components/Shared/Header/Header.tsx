@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
 import { Menu, X } from 'lucide-react';
 
@@ -42,7 +43,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink}>
-          <img 
+          <Image
             src="/assets/images/logo_1.png" 
             alt="V2V Network Logo" 
             className={styles.logoImage}

@@ -7,24 +7,25 @@ const LandingPageText: React.FC = () => {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setIsInView(true);
-      }
-    });
-  };
-
   useEffect(() => {
+    const handleScroll = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      });
+    };
+
     const observer = new IntersectionObserver(handleScroll, { threshold: 0.1 });
+    const currentRef = sectionRef.current;
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

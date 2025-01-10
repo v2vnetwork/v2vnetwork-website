@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./page.module.css";
+import Image from 'next/image';
 import Footer from "../components/Shared/Footer/Footer";
 import Header from "../components/Shared/Header/Header";
 
@@ -13,11 +14,11 @@ export default function ContactUs() {
           <h2 className={styles.sectionTitle}>Contact Us</h2>
           <div className={styles.contactGrid}>
             <div className={styles.imageSection}>
-              <img src="/assets/images/contactus.jpg" alt="Contact Us" className={styles.contactImage} />
+              <Image src="/assets/images/contactus.jpg" alt="Contact Us" className={styles.contactImage} />
             </div>
             <div className={styles.contactInfo}>
               <h3>Get in Touch</h3>
-              <p>We'd love to hear from you. Please use our contact information below.</p>
+              <p>We&apos;d love to hear from you. Please use our contact information below.</p>
               <div className={styles.contactDetails}>
                 <p><b>Email:</b> v2vnetwork@protonmail.com</p>
                 <p><b>Phone:</b> +1 (647) 354-2369</p>

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Banner.module.css";
+import Image from 'next/image';
 
 export default function Banner() {
   return (
@@ -14,7 +15,7 @@ export default function Banner() {
 
       {/* Image Section */}
       <div className={`${styles.imageSection} ${styles.animateImage}`}>
-        <img
+        <Image
           src="/assets/images/startup.jpg"
           alt="V2V Network"
           className={styles.image}
