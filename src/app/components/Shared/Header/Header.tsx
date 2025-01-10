@@ -43,11 +43,15 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink}>
-          <Image
-            src="/assets/images/logo_1.png" 
-            alt="V2V Network Logo" 
-            className={styles.logoImage}
-          />
+          <div style={{ position: 'relative', width: '180px', height: '60px' }}>
+            <Image
+              src="/assets/images/logo_1.png" 
+              alt="V2V Network Logo" 
+              className={styles.logoImage}
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
         </Link>
 
         <button className={styles.mobileMenuToggle} onClick={toggleMobileMenu}>
