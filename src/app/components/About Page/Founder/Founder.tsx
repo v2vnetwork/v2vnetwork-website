@@ -12,7 +12,7 @@ interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     name: "Rahul Ravinder Malhotra",
-    description: "Rahul is a seasoned Investor Banker with over 27+ years of rich experience in the areas of Strategy, Global Business Development, Investment Banking, Financial services, Venture Capital, Private Equity, Wealth management, Channel Management, Team Management, P&L Management, and is on board of several companies.",
+    description: "Rahul is a seasoned Investment Banker with over 27+ years of rich experience in the areas of Strategy, Global Business Development, Investment Banking, Financial services, Venture Capital, Private Equity, Wealth management, Channel Management, Team Management, P&L Management, and is on board of several companies.",
     imageFileName: "rahul.jpg",
   },
   {
