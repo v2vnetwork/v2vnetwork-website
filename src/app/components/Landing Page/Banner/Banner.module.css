@@ -41,16 +41,15 @@
   overflow: hidden;
 }
 
-.image {
-  max-width: 100%;
-  height: auto;
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-/* Removed .imageSection::after rule */
-
-/* Animations remain the same */
 @keyframes fadeInSlideUp {
   from {
     opacity: 0;
@@ -123,10 +122,8 @@
     max-width: 100%;
   }
 
-  .image {
-    max-width: 90%;
-    margin: 2rem auto 0;
-    display: block;
+  .imageWrapper {
+    padding-bottom: 75%; /* 4:3 aspect ratio for mobile */
   }
 
   .animateImage {
@@ -138,9 +135,5 @@
 @media (max-width: 768px) and (max-height: 666px) {
   .bannerSection {
     padding: 2rem 1rem;
-  }
-
-  .image {
-    max-width: 80%;
   }
 }

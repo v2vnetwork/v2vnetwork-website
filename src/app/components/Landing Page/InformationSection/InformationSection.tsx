@@ -31,8 +31,7 @@ const InformationSection: React.FC = () => {
     };
   }, []);
 
-  // Dummy data
-  const imageUrl = "/assets/images/business.jpg"; // Replace with your actual image path
+  const imageUrl = "/assets/images/business.jpg";
   const heading = "Our Mission";
   const paragraph1 = "At V2V Network, we specialize in elevating your company to stand out amidst the competition. Our mission is to support you every step of the way by providing tailored solutions that amplify your digital presence and enhance your investor readiness. We promote your company through our dynamic social media platforms, ensuring your brand reaches a wider audience. Additionally, we offer podcast opportunities to share your story and establish your authority in your industry, creating meaningful connections and impactful narratives.";
   
@@ -44,7 +43,14 @@ const InformationSection: React.FC = () => {
       ref={sectionRef}
     >
       <div className={styles.imageContainer}>
-        <Image src={imageUrl} alt={heading} className={styles.image} />
+        <div className={styles.imageWrapper}>
+          <Image 
+            src={imageUrl} 
+            alt={heading} 
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </div>
       <div className={styles.textContainer}>
         <h2 className={styles.heading}>{heading}</h2>

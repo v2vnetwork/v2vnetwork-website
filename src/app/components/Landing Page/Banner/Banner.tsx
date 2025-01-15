@@ -7,7 +7,9 @@ export default function Banner() {
     <section className={styles.bannerSection}>
       {/* Text Section */}
       <div className={styles.textSection}>
-        <h3 className={`${styles.heading} ${styles.animateText}`}>We are here to build your business.</h3>
+        <h3 className={`${styles.heading} ${styles.animateText}`}>
+          We are here to build your business.
+        </h3>
         <p className={`${styles.subText} ${styles.animateText}`}>
           Fueling your business dreams with unstoppable support and game-changing solutions!
         </p>
@@ -15,11 +17,15 @@ export default function Banner() {
 
       {/* Image Section */}
       <div className={`${styles.imageSection} ${styles.animateImage}`}>
-        <Image
-          src="/assets/images/startup.jpg"
-          alt="V2V Network"
-          className={styles.image}
-        />
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/assets/images/startup.jpg"
+            alt="V2V Network"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: 'cover', borderRadius: '16px' }}
+          />
+        </div>
       </div>
     </section>
   );
