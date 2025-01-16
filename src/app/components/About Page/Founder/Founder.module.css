@@ -1,46 +1,134 @@
+/* Animation */
 @keyframes scaleIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
+/* Team Container */
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Member Section */
 .memberSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 0;
+  max-width: 400px; /* Increased width for the section */
   animation: scaleIn 0.5s ease-out;
+  margin: 0 auto;
 }
 
+/* Member Image */
 .memberImage {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 0.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .memberSection:hover .memberImage {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Member Info */
 .memberInfo {
   flex: 1;
+  padding: 0 1rem; /* Add padding for better spacing */
 }
 
+/* Member Name */
 .memberName {
   font-size: 1.8rem;
-  margin-bottom: 0.25rem;
-}
-
-.memberRole {
-  font-size: 1.2rem;
-  color: #666;
   margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
 }
 
+/* Member Description */
 .memberDescription {
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.6; /* Increase line height for readability */
+  color: #555;
+  max-width: 100%; /* Reduced text width for description */
+  margin: 0 auto; /* Center align text */
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .teamContainer {
+    gap: 1.8rem;
+    padding: 1.5rem;
+  }
+
+  .memberSection {
+    max-width: 350px; /* Slightly narrower section width */
+  }
+
+  .memberName {
+    font-size: 1.6rem;
+  }
+
+  .memberDescription {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 85%; /* Adjust description width */
+  }
+}
+
+/* Small Screens (Mobile Landscape and Small Tablets) */
+@media (max-width: 768px) {
+  .teamContainer {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .memberSection {
+    max-width: 100%; /* Allow full width for smaller screens */
+  }
+
+  .memberName {
+    font-size: 1.5rem;
+  }
+
+  .memberDescription {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    line-height: 1.6;
+    max-width: 90%; /* Adjust description width */
+  }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+  .memberImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .memberName {
+    font-size: 1.3rem;
+  }
+
+  .memberDescription {
+    font-size: 0.95rem; /* Slightly smaller font size */
+    line-height: 1.5; /* Adjust line height for readability */
+    padding: 0 1rem; /* Add padding for smaller screens */
+    max-width: 95%; /* Slightly wider description width */
+  }
 }

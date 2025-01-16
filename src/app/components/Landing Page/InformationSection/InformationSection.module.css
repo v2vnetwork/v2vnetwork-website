@@ -57,8 +57,9 @@
     }
 
     .imageWrapper {
-        width: 70%;
-        padding-bottom: 98.4375%; /* Maintain the 2.5x height */
+        width: 50%;
+        height: 70%;
+        padding-bottom: 90%; 
         margin: 0 auto 1.5rem;
     }
 
@@ -79,8 +80,8 @@
     }
 
     .imageWrapper {
-        width: 100%;
-        padding-bottom: 140.625%; /* 2.5 times the 16:9 aspect ratio */
+        width: 70%;
+        padding-bottom: 80%; 
     }
 
     .heading {

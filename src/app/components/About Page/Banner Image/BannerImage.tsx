@@ -1,6 +1,8 @@
-import React from 'react';
-import styles from './BannerImage.module.css';
-import Image from 'next/image';
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import styles from "./BannerImage.module.css";
 
 interface BannerImageProps {
   altText: string;
@@ -9,11 +11,13 @@ interface BannerImageProps {
 
 const BannerImage: React.FC<BannerImageProps> = ({ altText, className }) => {
   return (
-    <div className={styles.bannerContainer}>
+    <div className={`${styles.bannerContainer} ${className || ""}`}>
       <Image
-        src="/assets/images/handshake.png"
+        src="/assets/images/handshake.png" // Update to the correct path of your image
         alt={altText}
-        className={`${styles.bannerImage} ${className || ''}`}
+        width={1920} // Set a default width for the image
+        height={1080} // Set a default height for the image
+        className={styles.bannerImage}
       />
     </div>
   );

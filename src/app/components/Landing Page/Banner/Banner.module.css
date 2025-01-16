@@ -43,9 +43,9 @@
 
 .imageWrapper {
   position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  width: 90%;
+  height: 100%;
+  padding-bottom: 60%; 
   border-radius: 16px;
   overflow: hidden;
 }
@@ -104,7 +104,7 @@
   .bannerSection {
     flex-direction: column;
     min-height: auto;
-    padding: 3rem 1.5rem;
+    padding: 1.5rem 1.5rem;
   }
 
   .textSection, .imageSection {
@@ -123,7 +123,7 @@
   }
 
   .imageWrapper {
-    padding-bottom: 75%; /* 4:3 aspect ratio for mobile */
+    padding-bottom: 75%; 
   }
 
   .animateImage {
