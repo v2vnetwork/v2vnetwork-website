@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./page.module.css";
-import Image from 'next/image';
+import Image from "next/image";
 import Footer from "../components/Shared/Footer/Footer";
 import Header from "../components/Shared/Header/Header";
 
@@ -14,7 +14,16 @@ export default function ContactUs() {
           <h2 className={styles.sectionTitle}>Contact Us</h2>
           <div className={styles.contactGrid}>
             <div className={styles.imageSection}>
-              <Image src="/assets/images/contactus.jpg" alt="Contact Us" className={styles.contactImage} />
+              {/* Using the fill approach for responsive scaling */}
+              <div style={{ position: "relative", width: "100%", height: "0", paddingBottom: "56.25%" }}>
+                <Image
+                  src="/assets/images/contactus.jpg"
+                  alt="Contact Us"
+                  className={styles.contactImage}
+                  fill
+                  style={{ objectFit: "cover", borderRadius: "8px" }}
+                />
+              </div>
             </div>
             <div className={styles.contactInfo}>
               <h3>Get in Touch</h3>
