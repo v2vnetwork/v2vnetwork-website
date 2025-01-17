@@ -94,48 +94,13 @@
   margin-right: 8px;
 }
 
-/* Mobile Menu Styles */
 @media (max-width: 768px) {
   .navigation {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #0c0404;
-    padding: 1rem;
-    z-index: 100;
-    height: auto;
-    overflow-y: auto;
-  }
-
-  .navigation.mobileMenuOpen {
-    display: flex;
   }
 
   .mobileMenuToggle {
     display: block;
-  }
-
-  .navLink {
-    padding: 1rem 0;
-    width: 100%;
-    text-align: center;
-    display: block;
-  }
-
-  .dropdownContent {
-    position: static;
-    display: block;
-    width: 100%;
-    box-shadow: none;
-  }
-
-  .dropdownItem {
-    padding: 1rem 0;
-    width: 100%;
-    text-align: center;
   }
 }
 

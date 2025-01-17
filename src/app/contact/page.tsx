@@ -14,8 +14,7 @@ export default function ContactUs() {
           <h2 className={styles.sectionTitle}>Contact Us</h2>
           <div className={styles.contactGrid}>
             <div className={styles.imageSection}>
-              {/* Using the fill approach for responsive scaling */}
-              <div style={{ position: "relative", width: "100%", height: "0", paddingBottom: "56.25%" }}>
+              <div style={{ position: "relative", width: "100%", height: "0", paddingBottom: "75%" }}>
                 <Image
                   src="/assets/images/contactus.jpg"
                   alt="Contact Us"

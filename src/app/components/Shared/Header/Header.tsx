@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import styles from "./Header.module.css";
+import MobileMenu from "./MobileMenu";
 
 const topics = [
   { title: "Podcast", icon: "🎙️", link: "/podcast" },
@@ -58,12 +59,8 @@ export default function Header() {
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <nav
-          className={`${styles.navigation} ${
-            isMobileMenuOpen ? styles.mobileMenuOpen : ""
-          }`}
-        >
-          <Link href="/" className={styles.navLink} onClick={closeMobileMenu}>
+        <nav className={styles.navigation}>
+          <Link href="/" className={styles.navLink}>
             Home
           </Link>
           <div
@@ -81,7 +78,6 @@ export default function Header() {
                     key={index}
                     href={topic.link}
                     className={styles.dropdownItem}
-                    onClick={closeMobileMenu}
                   >
                     <span className={styles.topicIcon}>{topic.icon}</span>
                     {topic.title}
@@ -90,21 +86,19 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link
-            href="/about"
-            className={styles.navLink}
-            onClick={closeMobileMenu}
-          >
+          <Link href="/about" className={styles.navLink}>
             About Us
           </Link>
-          <Link
-            href="/contact"
-            className={styles.navLink}
-            onClick={closeMobileMenu}
-          >
+          <Link href="/contact" className={styles.navLink}>
             Contact Us
           </Link>
         </nav>
+
+        <MobileMenu
+          isOpen={isMobileMenuOpen}
+          onClose={closeMobileMenu}
+          topics={topics}
+        />
       </div>
     </header>
   );
