@@ -73,7 +73,6 @@
 .contactImage {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 16 / 9;
 }
 
 .contactInfo {
@@ -103,7 +102,12 @@
 
 @media (max-width: 767px) {
   .contactImage {
-    max-width: 80%;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .imageSection {
+    width: 100%;
   }
 }
 

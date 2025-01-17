@@ -68,7 +68,8 @@
     display: flex;
     align-items: center;
     font-size: 16px;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
