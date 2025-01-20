@@ -49,8 +49,11 @@ export default function Header() {
               src="/assets/images/Logo.png"
               alt="V2V Network Logo"
               className={styles.logoImage}
-              fill
               style={{ objectFit: "contain" }}
+              width={180}
+              height={60}
+              priority
+              quality={90}
             />
           </div>
         </Link>

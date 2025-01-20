@@ -25,8 +25,10 @@ export default function ServicePage({ title, subtitle, description, imageSrc, im
             <Image 
               src={imageSrc} 
               alt={imageAlt} 
-              layout="fill"
-              objectFit="cover"
+              width={800}
+              height={600}
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
               className={styles.image}
             />
           </div>
